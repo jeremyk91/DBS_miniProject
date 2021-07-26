@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import sqlite3
 
 con = sqlite3.connect('music.db')
+haha
 
 
 features_df = pd.read_csv("features.csv")
