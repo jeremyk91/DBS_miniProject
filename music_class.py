@@ -8,6 +8,9 @@ Created on Sat Jul 24 17:51:11 2021
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import sqlite3
+
+con = sqlite3.connect('music.db')
 
 
 features_df = pd.read_csv("features.csv")
