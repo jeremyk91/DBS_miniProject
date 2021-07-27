@@ -17,7 +17,8 @@ def after_request(response):
 
 @app.route('/classify_N_persist', methods=['POST'])
 def classify_N_persist():
-    """Method will classify the test dataset and persist only the """
+    """Method will classify the test dataset and replace the existing table 'Xy_text' in music_classification.db """
+
     try:
         classify_test_dataset()
     except Exception as e:
