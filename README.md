@@ -1,6 +1,10 @@
 # DBS Mini Project
 
-After cloning the repo from GitHub, the user should mark the project root directory(screenshot below) for running the webservice and also ensure that the required libraries listed in requirements.txt is installed.
+The project seeks to produce a music genre classification (multi-class classification) web service.
+- The model development journal is documented in /notebook/music_classification.ipynb
+- The web service and functional test documentation are done in this README.md file below 
+
+After cloning the repo from GitHub, the user should mark the project root directory(screenshot below) for running the webservice and also ensure that the required libraries listed in requirements.txt is installed in your virtual environment.
 
 
 ![Screenshot](screenshots/projectHead.jpg)
@@ -12,7 +16,7 @@ Details of the deriving the chosen model is documented inside /notebook/music_cl
 
 ## Launch Web Service
 
-The web service is launched from /main/flask_web_service.py which fires up the web service.
+The web service is launched from /main/flask_web_service.py which fires up the Flask-Waitress web service.
 Once the web service is live and running, the console should display "Serving on host:port"
 
 ![Screenshot](screenshots/serving.jpg)
@@ -20,7 +24,7 @@ Once the web service is live and running, the console should display "Serving on
 
 
 
-## API Specification
+## API Specification & Endpoints
 
 We can test the REST api using the Postman app to test the respective 3 endpoints:
 The response JSON with {'response':true} indicates the endpoint has been called successfully; while {'response':false} indicates some exception has occurred during the API call.
