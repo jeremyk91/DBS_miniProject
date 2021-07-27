@@ -33,11 +33,9 @@ def get_titles_from_genre(genre):
     """Return only the titles from the specified genre"""
 
     query = f"""
-            SELECT title from Xy_test
-                    WHERE pred_genre = '{genre}'
-                """
+            SELECT title from Xy_test WHERE pred_genre = '{genre}'
+            """
     title_genre = pd.read_sql(sql=query, con=conn)
-    # print(title_genre)
     return title_genre
 
 

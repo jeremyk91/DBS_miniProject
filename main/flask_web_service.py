@@ -59,9 +59,9 @@ def titles_from_genre():
 
             # run function to call SQL query
             title_genre = get_titles_from_genre(genre)
-            result = {'response': True, 'genre': genre,'msg': title_genre.to_dict()}
+            result = {'response': True, 'genre': genre, 'msg': title_genre.to_dict()}
 
-        else: # return invalid response
+        else:  # return invalid response
             result = {'response': False, 'msg':'invalid input'}
 
     except Exception as e: # for Exception cases where database does not exist, SQL query fail, etc...
