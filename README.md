@@ -13,7 +13,7 @@ Details of the deriving the chosen model is documented inside /notebook/music_cl
 ## Launch Web Service
 
 The web service is launched from /main/flask_web_service.py which fires up the web service.
-Once the web service is running properly, the console should display "Serving on host:port"
+Once the web service is live and running, the console should display "Serving on host:port"
 
 ![Screenshot](screenshots/serving.jpg)
 
