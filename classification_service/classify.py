@@ -17,8 +17,7 @@ def classify_test_dataset():
     trackTitle_y_pred = pd.concat([trackTitle, y_pred], axis=1)  # concat the relevant columns tgt
     trackTitle_y_pred.to_sql(name='Xy_test',
                              con=conn,
-                             if_exists='replace',
-                             # replace so that the classify_test_dataset() method can run multiple times
+                             if_exists='replace', # replace so that the classify_test_dataset() method can run multiple times
                              )
 
 
@@ -42,7 +41,7 @@ def get_titles_from_genre(genre):
     return title_genre
 
 
-if __name__ == '__main__':
-    classify_test_dataset()
-    # get_classified_genres()
-    # get_titles_from_genre('metal')
+# if __name__ == '__main__':
+#     classify_test_dataset()
+#     get_classified_genres()
+#     get_titles_from_genre('metal')
