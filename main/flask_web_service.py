@@ -17,7 +17,8 @@ def after_request(response):
 
 @app.route('/classify_N_persist', methods=['POST'])
 def classify_N_persist():
-    """Method will classify the test dataset and persist only the """
+    """Method will classify the test dataset and replace the existing table 'Xy_text' in music_classification.db """
+
     try:
         classify_test_dataset()
     except Exception as e:
@@ -58,9 +59,9 @@ def titles_from_genre():
 
             # run function to call SQL query
             title_genre = get_titles_from_genre(genre)
-            result = {'response': True, 'genre': genre,'msg': title_genre.to_dict()}
+            result = {'response': True, 'genre': genre, 'msg': title_genre.to_dict()}
 
-        else: # return invalid response
+        else:  # return invalid response
             result = {'response': False, 'msg':'invalid input'}
 
     except Exception as e: # for Exception cases where database does not exist, SQL query fail, etc...
