@@ -9,6 +9,7 @@ clf = load(BASE_DIR + '/model_files/KNN_clf.joblib')
 
 
 def classify_test_dataset():
+    """Classify the test dataset """
     test_df = pd.read_csv(BASE_DIR + "/Data/test.csv")
     trackTitle = test_df[['trackID', 'title']]
 
@@ -29,7 +30,7 @@ def get_classified_genres():
     return pred_genre
 
 
-def get_titles_from_genre(genre):
+def get_titles_from_genre(genre: str) -> pd.DataFrame:
     """Return only the titles from the specified genre"""
 
     query = f"""

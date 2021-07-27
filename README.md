@@ -13,14 +13,17 @@ After cloning the repo from GitHub, the user should mark the project root direct
 
 Details of the deriving the chosen model is documented inside /notebook/music_classification.ipynb
 
+## Core Functions
 
-## Launch Web Service
+The core functions are in /classification_service/classify.py whereas the web service simply calls these core functions. This allows for the functions to be tested (via unit tests) independent from the web service.
+
+
+## Launching the Web Service
 
 The web service is launched from /main/flask_web_service.py which fires up the Flask-Waitress web service.
 Once the web service is live and running, the console should display "Serving on host:port"
 
 ![Screenshot](screenshots/serving.jpg)
-
 
 
 
@@ -37,6 +40,7 @@ The response JSON with {'response':true} indicates the endpoint has been called 
 
 
 2) /classified_genres [GET]
+- Endpoint outputs all the genres found in the test dataset
 
 	![Screenshot](screenshots/classified_genres.jpg)
 
@@ -49,7 +53,7 @@ The response JSON with {'response':true} indicates the endpoint has been called 
 
 ## Unit Tests
 
-The core functions (SQL queries) used in the web service are subject to unit tests to check that the database/table exists and that the response from the various functions is as-expected.
+The core functions (SQL queries) in /classification_service/classify.py used in the web service are subject to unit tests to check that the database/table exists and that the response from the various functions is as-expected.
 
 ![Screenshot](screenshots/unittests.jpg)
 
