@@ -58,6 +58,15 @@ The core functions (SQL queries) in /classification_service/classify.py used in 
 ![Screenshot](screenshots/unittests.jpg)
 
 
+## Docker Build & Run
+- The docker commands are listed inside the Dockerfile.
+- From the terminal, run the following commands:
+- -- docker build -t python-minip . (i opt to name my build image as 'python-minip')
+- -- docker run -p 8080:8080 python-minip (this exposes the port # from local:container)
+![Screenshot](screenshots/dockerbuild.jpg)
+
+
+
 
 
 
