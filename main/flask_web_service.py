@@ -74,7 +74,6 @@ def titles_from_genre():
 
 def start_web_service():
     serve(app, host='0.0.0.0', port=8080)
-    # app.run() # running native Flask app is just a development server; not WSGI server.
 
 
 if __name__ == '__main__':
